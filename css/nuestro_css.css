@@ -1,10 +1,29 @@
-.centrado{
-    text-align: center;
+.centrado {
+  text-align: center;
 }
-.contenedor{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
 
+.contenedor {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.ocultar {
+  display: none;
+}
+
+.activar {
+  display: block;
+}
+
+.list-group {
+  cursor: pointer;
+}
+#editar_datos_fafa{
+  cursor: pointer;
+}
+.encabezado{
+  background-color: dodgerblue;
+  margin-bottom: 2em;
+  padding: 1em;
 }
