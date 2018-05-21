@@ -1,3 +1,10 @@
 .centrado{
     text-align: center;
 }
+.contenedor{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+
+}

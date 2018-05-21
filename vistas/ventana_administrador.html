@@ -3,6 +3,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
@@ -26,33 +27,25 @@
               </div>
               <div class="col-sm-9">
                   <div class="container">
-                        <table class="table">
+                        <table class="table" id="listar_usuarios">
                                 <thead class="thead-dark">
                                   <tr>
-                                    <th>Nombre</th>
-                                    <th>Lastname</th>
-                                    <th>Email</th>
+                                    <th>Nombre de usuario</th>
+                                    <th>Correo electrónico</th>
+                                    <th>Activo</th>
+                                    <th>Gestionar usuario</th>
                                   </tr>
                                 </thead>
                                 <tbody>
                                   <tr>
-                                    <td>John</td>
-                                    <td>Doe</td>
-                                    <td>john@example.com</td>
+                                    <td>blas_martin</td>
+                                    <td>blas_martin@ual.prueba.com</td>
+                                    <td>no</td>
+                                    <td class="contenedor"><i class="fa fa-trash-o" style="font-size:24px"></i> <i class="fa fa-pencil-square-o" style="font-size:24px"></i></td>
                                   </tr>
-                                  <tr>
-                                    <td>Mary</td>
-                                    <td>Moe</td>
-                                    <td>mary@example.com</td>
-                                  </tr>
-                                  <tr>
-                                    <td>July</td>
-                                    <td>Dooley</td>
-                                    <td>july@example.com</td>
-                                  </tr>
-                                </tbody>
+                                 </tbody>
                               </table>
-                              <form>
+                              <form id="editar_datos">
                                   <div class="form-group">
                                     <label for="exampleInputEmail1">Email address</label>
                                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
