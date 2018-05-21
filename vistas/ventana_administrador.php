@@ -55,12 +55,10 @@
             <div class="form-group ">
               <label for="exampleInputEmail1">Nombre de usuario</label>
               <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Introduzca el nombre de usuario">
-
             </div>
             <div class="form-group ">
               <label for="exampleInputEmail1">Correo electrónico</label>
               <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Introduzca el correo electrónico">
-
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Contraseña</label>
@@ -70,7 +68,6 @@
               <label for="exampleInputPassword1">Repetir contraseña</label>
               <input type="password" class="form-control" placeholder="Repita la contraseña">
             </div>
-
             <button type="submit" class="btn btn-primary">Añadir usuario</button>
           </form>
           <form id="editar_datos" class="ocultar">
