@@ -35,20 +35,45 @@
               <tr>
                 <th>Nombre de usuario</th>
                 <th>Correo electrónico</th>
+                <th>Admin</th>
                 <th>Activo</th>
                 <th>Gestionar usuario</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>blas_martin</td>
-                <td>blas_martin@ual.prueba.com</td>
-                <td>no</td>
-                <td class="contenedor">
-                  <i class="fa fa-trash-o" style="font-size:24px"></i>
-                  <i class="fa fa-pencil-square-o" id="editar_datos_fafa" style="font-size:24px" onclick="ventana_admin(3)"></i>
-                </td>
-              </tr>
+            <?php
+            
+            include '../bd/controlador_get_usuarios.php';
+            
+              if($resultado->num_rows>0) {
+               
+                while($row=$resultado -> fetch_assoc()){
+                  echo" <tr>
+                  <td>".$row["user"]."</td>
+                  <td>".$row["email"]."</td>";
+                  if($row["admin"]==0){
+                    echo"<td>No</td>";
+                  }else{
+                    echo"<td>Sí</td>";
+                  }
+                  if($row["activo"]==0){
+                    echo"<td>No</td>";
+                  }else{
+                    echo"<td>Sí</td>";
+                  }
+                                  
+                  echo"<td class='contenedor'>
+                    <a href='../bd/controlador_eliminar_usuario.php?valor=".$row["user"]."'><i class='fa fa-trash-o' style='font-size:24px' ></i></a>
+                    <i class='fa fa-pencil-square-o' id='editar_datos_fafa' style='font-size:24px' onclick='ventana_admin(3)'></i>
+                  </td>
+                </tr>";
+                }
+              }
+              
+            
+
+            ?>
+
             </tbody>
           </table>
           <form id="crear_user" class="ocultar">
@@ -70,20 +95,22 @@
             </div>
             <button type="submit" class="btn btn-primary">Añadir usuario</button>
           </form>
+
           <form id="editar_datos" class="ocultar">
             <div class="form-group ">
               <label for="exampleInputEmail1">Nombre de usuario</label>
-              <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Introduzca el nombre de usuario" value="">
+              <input type="text" class="form-control" aria-describedby="emailHelp" name="usuario" placeholder="Introduzca el nombre de usuario" value="">
+              <input type="text" value="">
 
             </div>
             <div class="form-group ">
               <label for="exampleInputEmail1">Correo electrónico</label>
-              <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Introduzca el correo electrónico" value="">
+              <input type="email" class="form-control" aria-describedby="emailHelp" name="correo" placeholder="Introduzca el correo electrónico" value="">
 
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Contraseña</label>
-              <input type="text" class="form-control" placeholder="Introduzca la contraseña" value="gsgdf">
+              <input type="text" class="form-control" name="contrasenia" placeholder="Introduzca la contraseña" value="gsgdf">
             </div>
 
 

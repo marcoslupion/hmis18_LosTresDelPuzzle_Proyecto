@@ -7,6 +7,7 @@ function login_correcto()
 {
 
 }
+
 var estado_ventana = 0; //0 = nada abierto ; 1 = listar usuarios abierto; 2 = crear usuario abierto; 3 = editar datos abierto
 
 var listar = document.getElementById("listar_usuarios");
