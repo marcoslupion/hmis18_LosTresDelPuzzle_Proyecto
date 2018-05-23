@@ -1,3 +1,8 @@
+//****
+//****
+//LOGIN
+//****
+//****
 var login_button=document.getElementById("bt_login");
 var usuario;
 var contraseña;
@@ -5,6 +10,7 @@ login_button.onclick= function(e)
 {
   usuario = document.getElementById("user");
   contraseña = document.getElementById("pass");
+
   var formulario = document.getElementById("form");
   var correcto=true;
   if(contraseña.value==""){
@@ -34,6 +40,84 @@ function falta_contraseña(){
   document.getElementById("no_pass").innerHTML="<label class='error'>Este campo es obligatorio</label>";
 }
 
+//****
+//****
+//REGISTRO
+//****
+//****
+var registro_button=document.getElementById("bt_registro");
+var usuario_r;
+var contraseña_r1;
+var contraseña_r2;
+var email_r;
+
+registro_button.onclick= function(e)
+{
+  usuario_r = document.getElementById("user_r");
+  contraseña_r1 = document.getElementById("pass_r");
+  contraseña_r2 = document.getElementById("pass_r2");
+  email_r = document.getElementById("email_r");
+
+  var formulario = document.getElementById("form_r");
+  var correcto=true;
+  if(usuario_r.value==""){
+    falta_usuario_r();
+    correcto=false;
+  }
+  if(contraseña_r1.value==""){
+    falta_contraseña_r1();
+    correcto=false;
+  }
+  if(contraseña_r2.value==""){
+    falta_contraseña_r2();
+    correcto=false;
+  }
+  if(contraseña_r1.value != contraseña_r2.value){
+    contraseña_no_coincide();
+    correcto=false;
+  }
+  if(email_r.value==""){
+    falta_email();
+    correcto=false;
+  }
+  if(correcto){
+    formulario.submit();
+  }
+}
+
+function falta_usuario_r(){
+  document.getElementById("no_user_r").innerHTML="<label class='error'>Este campo es obligatorio</label>";
+}
+
+function falta_contraseña_r1(){
+  document.getElementById("no_pass_r1").innerHTML="<label class='error'>Este campo es obligatorio</label>";
+}
+
+function falta_contraseña_r2(){
+  document.getElementById("no_pass_r2").innerHTML="<label class='error'>Este campo es obligatorio<br></label>";
+}
+
+function contraseña_no_coincide(){
+  document.getElementById("no_pass_r2").innerHTML+="<label class='error'>Las contraseñas no coinciden</label>";
+}
+
+function falta_email(){
+  document.getElementById("no_email").innerHTML="<label class='error'>Este campo es obligatorio</label>";
+}
+
+function usuario_ya_existe(){
+  alert("Este usuario ya está registrado");
+}
+
+function usuario_creado(){
+  alert("El usuario ha sido creado con éxito. Debe esperar a que un administrador le dé de alta.");
+}
+
+//****
+//****
+//MARCOS
+//****
+//****
 var estado_ventana = 0; //0 = nada abierto ; 1 = listar usuarios abierto; 2 = crear usuario abierto; 3 = editar datos abierto
 
 var listar = document.getElementById("listar_usuarios");
@@ -91,11 +175,11 @@ function ventana_admin(num,contador) {
     var _usuario = document.getElementById("user"+contador).textContent;
     var _email = document.getElementById("email"+contador).textContent;
     console.log
-  
+
     document.getElementById("user_editar").value=_usuario;
     document.getElementById("user_rep").value=_usuario;
     document.getElementById("email_editar").value=_email;
-    
+
   }
 }
 
@@ -110,4 +194,3 @@ function comprobar_editar(){
       var f = document.getElementById("editar_datos").submit();
     }
 }
-

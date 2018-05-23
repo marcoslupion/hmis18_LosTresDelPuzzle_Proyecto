@@ -19,6 +19,7 @@
       <input id="tab-2" type="radio" name="tab" class="sign-up">
       <label for="tab-2" class="tab">Sign Up</label>
       <div class="login-form">
+        <div class="sign-in-htm">
         <form id="form" action="bd/controlador_login.php" class="sign-in-htm" method="post">
           <div class="php"></div>
           <div class="group">
@@ -40,35 +41,34 @@
           <div class="group">
             <input id="bt_login" class="button" value="Sign In">
           </div>
-          <div class="hr"></div>
-          <div class="foot-lnk">
-            <a href="#forgot">Forgot Password?</a>
-          </div>
+          </form>
         </div>
         <div class="sign-up-htm">
+          <form id="form_r" action="bd/controlador_registro.php" class="sign-up-htm" method="post">
           <div class="group">
-            <label for="user" class="label">Username</label>
-            <input id="user" type="text" class="input">
-          </div>
-          <div class="group">
-            <label for="pass" class="label">Password</label>
-            <input id="pass" type="password" class="input" data-type="password">
+            <label for="user_r" class="label">Username</label>
+            <input id="user_r" type="text" class="input" name="user_r">
+            <div id="no_user_r"></div>
           </div>
           <div class="group">
-            <label for="pass" class="label">Repeat Password</label>
-            <input id="pass" type="password" class="input" data-type="password">
+            <label for="pass_r" class="label">Password</label>
+            <input id="pass_r" type="password" class="input" data-type="password" name="pass_r">
+            <div id="no_pass_r1"></div>
           </div>
           <div class="group">
-            <label for="pass" class="label">Email Address</label>
-            <input id="pass" type="text" class="input">
+            <label for="pass_r2" class="label">Repeat Password</label>
+            <input id="pass_r2" type="password" class="input" data-type="password">
+            <div id="no_pass_r2"></div>
           </div>
           <div class="group">
-            <input class="button" value="Sign Up">
+            <label for="email_r" class="label">Email Address</label>
+            <input id="email_r" type="text" class="input" name="email_r">
+            <div id="no_email"></div>
           </div>
-          <div class="hr"></div>
-          <div class="foot-lnk">
-            <label for="tab-1">Already Member?</a>
+          <div class="group">
+            <input id="bt_registro" class="button" value="Sign Up">
           </div>
+        </form>
         </div>
       </div>
     </div>

@@ -1,4 +1,3 @@
-
 <script src="../js/general.js"></script>
 <?php
 include 'modelo_login.php';
