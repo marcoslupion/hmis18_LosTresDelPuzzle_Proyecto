@@ -6,7 +6,7 @@
   <title>Proyecto HMIS</title>
   <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
   <link rel="stylesheet" href="css/style.css">
-
+  <link rel="stylesheet" href="css/nuestro_css.css">
 
 </head>
 
@@ -22,10 +22,12 @@
           <div class="group">
             <label for="user" class="label">Username</label>
             <input id="user" type="text" class="input" name="user">
+            <div id="no_user"></div>
           </div>
           <div class="group">
             <label for="pass" class="label">Password</label>
             <input id="pass" type="password" class="input" data-type="password" name="pass">
+            <div id="no_pass"></div>
           </div>
           <!--
           <div class="group">
@@ -34,7 +36,7 @@
           </div>
           -->
           <div class="group">
-            <input type="submit" class="button" value="Sign In">
+            <input id="bt_login" class="button" value="Sign In">
           </div>
           <div class="hr"></div>
           <div class="foot-lnk">
