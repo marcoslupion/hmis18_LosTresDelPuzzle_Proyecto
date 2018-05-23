@@ -47,10 +47,11 @@
             
               if($resultado->num_rows>0) {
                
+                $contador =1;
                 while($row=$resultado -> fetch_assoc()){
                   echo" <tr>
-                  <td>".$row["user"]."</td>
-                  <td>".$row["email"]."</td>";
+                  <td id=user$contador>".$row["user"]."</td>
+                  <td id=email$contador>".$row["email"]."</td>";
                   if($row["admin"]==0){
                     echo"<td>No</td>";
                   }else{
@@ -64,9 +65,10 @@
                                   
                   echo"<td class='contenedor'>
                     <a href='../bd/controlador_eliminar_usuario.php?valor=".$row["user"]."'><i class='fa fa-trash-o' style='font-size:24px' ></i></a>
-                    <i class='fa fa-pencil-square-o' id='editar_datos_fafa' style='font-size:24px' onclick='ventana_admin(3)'></i>
+                    <i class='fa fa-pencil-square-o' id='editar_datos_fafa' style='font-size:24px' onclick='ventana_admin(3,$contador)'></i>
                   </td>
                 </tr>";
+                $contador =$contador+1;
                 }
               }
               
@@ -96,26 +98,30 @@
             <button type="submit" class="btn btn-primary">Añadir usuario</button>
           </form>
 
-          <form id="editar_datos" class="ocultar">
+          <form id="editar_datos" class="ocultar" action="../bd/controlador_editar.php" method="post">
             <div class="form-group ">
               <label for="exampleInputEmail1">Nombre de usuario</label>
-              <input type="text" class="form-control" aria-describedby="emailHelp" name="usuario" placeholder="Introduzca el nombre de usuario" value="">
-              <input type="text" value="">
+              <input id="user_editar" type="text" class="form-control" aria-describedby="emailHelp" name="user_editar" placeholder="Introduzca el nombre de usuario" value="">
+              <input id="user_rep" name="user_rep" type="text" value="">
 
             </div>
             <div class="form-group ">
               <label for="exampleInputEmail1">Correo electrónico</label>
-              <input type="email" class="form-control" aria-describedby="emailHelp" name="correo" placeholder="Introduzca el correo electrónico" value="">
+              <input  id="email_editar" type="email" class="form-control" aria-describedby="emailHelp" name="email_editar" placeholder="Introduzca el correo electrónico" value="">
 
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Contraseña</label>
-              <input type="text" class="form-control" name="contrasenia" placeholder="Introduzca la contraseña" value="gsgdf">
+              <label  for="exampleInputPassword1">Contraseña</label>
+              <input id="pass1_editar" type="text" class="form-control" name="pass1_editar" placeholder="Introduzca la contraseña" value="">
+            </div>
+            <div class="form-group">
+              <label  for="exampleInputPassword1">Repetir contraseña</label>
+              <input id="pass2_editar" type="text" class="form-control" name="pass2_editar" placeholder="Introduzca la contraseña" value="">
             </div>
 
-
-            <button type="submit" class="btn btn-primary">Guardar cambios</button>
-            <button type="" class="btn btn-primary">Cancelar cambios y volver atras</button>
+            <!--<button class="btn btn-primary" onclick=comprobar_editar()>Guardar cambios</button>-->
+            <input class="boton_general"   value="Enviar" onclick="comprobar_editar()">
+            <!--<button type="" class="btn btn-primary">Cancelar cambios y volver atras</button>-->
           </form>
 
         </div>
