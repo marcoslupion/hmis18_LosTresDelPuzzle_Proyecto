@@ -45,5 +45,5 @@ if($usuario !=$usuario_anterior){
 
 ?>
 <script type="text/javascript">
- // document.location.assign('../vistas/ventana_administrador.php');
+  document.location.assign('../vistas/ventana_administrador.php');
 </script>
