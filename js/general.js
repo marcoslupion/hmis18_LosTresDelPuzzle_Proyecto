@@ -43,7 +43,7 @@ var editar = document.getElementById("editar_datos");
 var boton_listar = document.getElementById("tabla_boton");
 var boton_crear = document.getElementById("form_boton");
 
-function ventana_admin(num) {
+function ventana_admin(num,contador) {
   var listar = document.getElementById("listar_usuarios");
   var crear = document.getElementById("crear_user");
   var editar = document.getElementById("editar_datos");
@@ -87,9 +87,27 @@ function ventana_admin(num) {
     editar.classList.add("activar");
 
     estado_ventana = 3;
+
+    var _usuario = document.getElementById("user"+contador).textContent;
+    var _email = document.getElementById("email"+contador).textContent;
+    console.log
+  
+    document.getElementById("user_editar").value=_usuario;
+    document.getElementById("user_rep").value=_usuario;
+    document.getElementById("email_editar").value=_email;
+    
   }
 }
 
-/*
-$("editar_datos_fafa").click(ventana_admin(3));
-*/
+function comprobar_editar(){
+  var c1 = document.getElementById("pass1_editar").value;
+    var c2 = document.getElementById("pass2_editar").value;
+    console.log(c1+"   "+ c2)
+    if(c1!=c2){
+      alert("Las contraseñas no coinciden. ¡Si quieres cambiar la contraseña. tienen que coincidir!");
+      return;
+    }else{
+      var f = document.getElementById("editar_datos").submit();
+    }
+}
+
