@@ -113,6 +113,10 @@ function usuario_creado(){
   alert("El usuario ha sido creado con éxito. Debe esperar a que un administrador le dé de alta.");
 }
 
+function usuario_creado_admin(){
+  alert("El usuario ha sido creado con éxito.El usuario está activo");
+}
+
 //****
 //****
 //Gestion ventana administrador
@@ -210,4 +214,10 @@ function comprobar_editar(){
       var f = document.getElementById("editar_datos").submit();
     }
  
+}
+
+
+function crear_usuario_admin(){
+  
+  var f = document.getElementById("crear_user").submit();
 }

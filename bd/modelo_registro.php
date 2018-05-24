@@ -9,7 +9,11 @@ class modelo_registro extends conexion
       $sql = "insert into usuario (user,pass,email,admin,activo) values ('$user','$pass','$email',0,0)";
       $result = $this->conn->query($sql);
     }
-
+    public function crear_usuario_admin($user,$pass,$email)
+    {
+      $sql = "insert into usuario (user,pass,email,admin,activo) values ('$user','$pass','$email',0,1)";
+      $result = $this->conn->query($sql);
+    }
     public function comprobar_usuario($user){
       $sql = "select * from usuario where user='$user'";
       $result = $this->conn->query($sql);
