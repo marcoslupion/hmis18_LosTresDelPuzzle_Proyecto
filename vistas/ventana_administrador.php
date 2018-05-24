@@ -58,9 +58,9 @@
                     echo"<td>Sí</td>";
                   }
                   if($row["activo"]==0){
-                    echo"<td>No</td>";
+                    echo"<td id=activo$contador>No</td>";
                   }else{
-                    echo"<td>Sí</td>";
+                    echo"<td id=activo$contador>Sí</td>";
                   }
                                   
                   echo"<td class='contenedor'>
@@ -78,24 +78,26 @@
 
             </tbody>
           </table>
-          <form id="crear_user" class="ocultar">
-            <div class="form-group ">
+          <form id="crear_user" class="ocultar" action="../bd/controlador_crear_usuario.php" class="sign-up-htm" method="post">
+              <div class="form-group ">
               <label for="exampleInputEmail1">Nombre de usuario</label>
-              <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Introduzca el nombre de usuario">
+              <input id="user_r" name="user_r" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Introduzca el nombre de usuario">
             </div>
             <div class="form-group ">
               <label for="exampleInputEmail1">Correo electrónico</label>
-              <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Introduzca el correo electrónico">
+              <input id="email_r" name="email_r" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Introduzca el correo electrónico">
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Contraseña</label>
-              <input type="password" class="form-control" placeholder="Introduzca la contraseña">
+              <input id="pass_r" name="pass_r" type="password" class="form-control" placeholder="Introduzca la contraseña">
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Repetir contraseña</label>
-              <input type="password" class="form-control" placeholder="Repita la contraseña">
+              <input id="pass_r2" name="pass_r2" type="password" class="form-control" placeholder="Repita la contraseña">
             </div>
-            <button type="submit" class="btn btn-primary">Añadir usuario</button>
+            <div class="group">
+            <input id="bt_submit_crear" class="button" value="Sign Up" onclick="crear_usuario_admin()">
+          </div>
           </form>
 
           <form id="editar_datos" class="ocultar" action="../bd/controlador_editar.php" method="post">
@@ -118,8 +120,14 @@
               <label  for="exampleInputPassword1">Repetir contraseña</label>
               <input id="pass2_editar" type="text" class="form-control" name="pass2_editar" placeholder="Introduzca la contraseña" value="">
             </div>
-
-            <!--<button class="btn btn-primary" onclick=comprobar_editar()>Guardar cambios</button>-->
+            <div class="form-group form-check">
+               <label for="activo_editar" class="form-check-label">
+                 <input class="form-check-input" type="checkbox" name="activo_editar" id="activo_editar"> Activo
+                 </label>
+             </div>
+             <input id="resultado_activo" class="ocultar" name="resultado_activo" type="text" value="">
+          
+                  <!--<button class="btn btn-primary" onclick=comprobar_editar()>Guardar cambios</button>-->
             <input class="boton_general"   value="Enviar" onclick="comprobar_editar()">
             <!--<button type="" class="btn btn-primary">Cancelar cambios y volver atras</button>-->
           </form>

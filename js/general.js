@@ -114,7 +114,6 @@ function usuario_creado(){
 }
 
 function usuario_activo(){
-
   alert("El usuario está activo");
 }
 
@@ -122,9 +121,13 @@ function usuario_no_activo(){
   alert("El usuario no está activo");
 }
 
+function usuario_creado_admin(){
+  alert("El usuario ha sido creado con éxito.El usuario está activo");
+}
+
 //****
 //****
-//MARCOS
+//Gestion ventana administrador
 //****
 //****
 var estado_ventana = 0; //0 = nada abierto ; 1 = listar usuarios abierto; 2 = crear usuario abierto; 3 = editar datos abierto
@@ -183,11 +186,19 @@ function ventana_admin(num,contador) {
 
     var _usuario = document.getElementById("user"+contador).textContent;
     var _email = document.getElementById("email"+contador).textContent;
+    var _activo = document.getElementById("activo"+contador).textContent;
     console.log
 
     document.getElementById("user_editar").value=_usuario;
     document.getElementById("user_rep").value=_usuario;
     document.getElementById("email_editar").value=_email;
+    var trad =  document.getElementById("activo_editar");
+    if(_activo=="No"){
+      trad.checked=false;
+    }else{
+      trad.checked=true;
+    }
+
 
   }
 }
@@ -200,6 +211,21 @@ function comprobar_editar(){
       alert("Las contraseñas no coinciden. ¡Si quieres cambiar la contraseña. tienen que coincidir!");
       return;
     }else{
+      var estado_check = document.getElementById("activo_editar").checked;
+      var input_activo = document.getElementById("resultado_activo");
+      if(estado_check==true){
+        input_activo.value=1;
+      }else{
+        input_activo.value=0;
+      }
+
       var f = document.getElementById("editar_datos").submit();
     }
+
+}
+
+
+function crear_usuario_admin(){
+
+  var f = document.getElementById("crear_user").submit();
 }
