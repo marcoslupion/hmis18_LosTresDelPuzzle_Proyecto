@@ -113,6 +113,15 @@ function usuario_creado(){
   alert("El usuario ha sido creado con éxito. Debe esperar a que un administrador le dé de alta.");
 }
 
+function usuario_activo(){
+
+  alert("El usuario está activo");
+}
+
+function usuario_no_activo(){
+  alert("El usuario no está activo");
+}
+
 //****
 //****
 //MARCOS

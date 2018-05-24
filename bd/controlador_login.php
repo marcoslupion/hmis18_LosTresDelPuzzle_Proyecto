@@ -1,7 +1,7 @@
 <script src="../js/general.js"></script>
 <?php
 include 'modelo_login.php';
-
+@session_start();
 $user=$_POST["user"];
 $pass=$_POST["pass"];
 $modelo_login = new modelo_login();
@@ -14,12 +14,16 @@ if($resultado==0)
 }
 else if($resultado==1)
 {
-  $script = "<script></script>";
+  $_SESSION["no_admin"]=1;
+  $_SESSION["usuario"]=$user;
+  $script = "<script>document.location.assign('../vistas/usuario_registrado.php');</script>";
   echo $script;
 }
 else
 {
-  $script = "<script>document.location.assign('../vistas/ventana_administrador.html');</script>";
+  $_SESSION["admin"]=1;
+  $_SESSION["usuario"]=$user;
+  $script = "<script>document.location.assign('../vistas/ventana_administrador.php');</script>";
   echo $script;
 }
 ?>
