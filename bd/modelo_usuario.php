@@ -11,30 +11,30 @@ class modelo_usuario extends conexion
       
       return $result;
     }
-    public function modificar_correo($usuario,$correo)
+    public function modificar_correo($usuario,$correo,$activo)
     {
-      $sql = "update usuario  set email = '$correo' where user='$usuario';";
+      $sql = "update usuario  set email = '$correo', activo='$activo' where user='$usuario';";
       $result = $this->conn->query($sql);
       
       return $result;
     }
-    public function modificar_contrasenia($usuario,$correo,$contrasenia)
+    public function modificar_contrasenia($usuario,$correo,$contrasenia,$activo)
     {
-      $sql = "update usuario  set email = '$correo' , pass = '$contrasenia' where user='$usuario';";
+      $sql = "update usuario  set email = '$correo' , pass = '$contrasenia', activo='$activo' where user='$usuario';";
       $result = $this->conn->query($sql);
       
       return $result;
     }
-    public function modificar_usuario($usuario,$correo,$antiguo)
+    public function modificar_usuario($usuario,$correo,$antiguo,$activo)
     {
-      $sql = "update usuario  set user = '$usuario',email = '$correo' where user='$antiguo';";
+      $sql = "update usuario  set user = '$usuario',email = '$correo', activo='$activo' where user='$antiguo';";
       $result = $this->conn->query($sql);
       
       return $result;
     }
-    public function modificar_usuario_contrasenia($usuario,$antiguo,$correo,$contrasenia)
+    public function modificar_usuario_contrasenia($usuario,$antiguo,$correo,$contrasenia,$activo)
     {
-      $sql = "update usuario  set user='$usuario',email = '$correo' , pass = '$contrasenia' where user='$antiguo';";
+      $sql = "update usuario  set user='$usuario',email = '$correo' , pass = '$contrasenia', activo='$activo' where user='$antiguo';";
       $result = $this->conn->query($sql);
       
       return $result;

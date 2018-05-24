@@ -19,7 +19,7 @@ else if($resultado==1)
 }
 else
 {
-  $script = "<script>document.location.assign('../vistas/ventana_administrador.html');</script>";
+  $script = "<script>document.location.assign('../vistas/ventana_administrador.php');</script>";
   echo $script;
 }
 ?>
