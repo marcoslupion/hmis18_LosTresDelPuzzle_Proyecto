@@ -96,7 +96,7 @@
               <input id="pass_r2" name="pass_r2" type="password" class="form-control" placeholder="Repita la contraseña">
             </div>
             <div class="group">
-            <input id="bt_submit_crear" class="button" value="Sign Up" onclick="crear_usuario_admin()">
+            <input id="bt_submit_crear" class="btn btn-primary button" value="Sign Up" onclick="crear_usuario_admin()">
           </div>
           </form>
 
@@ -128,7 +128,7 @@
              <input id="resultado_activo" class="ocultar" name="resultado_activo" type="text" value="">
 
                   <!--<button class="btn btn-primary" onclick=comprobar_editar()>Guardar cambios</button>-->
-            <input class="btn boton_general"   value="Enviar" onclick="comprobar_editar()">
+            <input class="btn btn-primary boton_general"   value="Enviar" onclick="comprobar_editar()">
             <!--<button type="" class="btn btn-primary">Cancelar cambios y volver atras</button>-->
           </form>
 
