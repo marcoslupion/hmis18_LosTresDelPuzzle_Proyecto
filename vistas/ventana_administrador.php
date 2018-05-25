@@ -42,11 +42,11 @@
             </thead>
             <tbody>
             <?php
-            
+
             include '../bd/controlador_get_usuarios.php';
-            
+
               if($resultado->num_rows>0) {
-               
+
                 $contador =1;
                 while($row=$resultado -> fetch_assoc()){
                   echo" <tr>
@@ -62,7 +62,7 @@
                   }else{
                     echo"<td id=activo$contador>Sí</td>";
                   }
-                                  
+
                   echo"<td class='contenedor'>
                     <a href='../bd/controlador_eliminar_usuario.php?valor=".$row["user"]."'><i class='fa fa-trash-o' style='font-size:24px' ></i></a>
                     <i class='fa fa-pencil-square-o' id='editar_datos_fafa' style='font-size:24px' onclick='ventana_admin(3,$contador)'></i>
@@ -71,8 +71,8 @@
                 $contador =$contador+1;
                 }
               }
-              
-            
+
+
 
             ?>
 
@@ -126,9 +126,9 @@
                  </label>
              </div>
              <input id="resultado_activo" class="ocultar" name="resultado_activo" type="text" value="">
-          
+
                   <!--<button class="btn btn-primary" onclick=comprobar_editar()>Guardar cambios</button>-->
-            <input class="boton_general"   value="Enviar" onclick="comprobar_editar()">
+            <input class="btn boton_general"   value="Enviar" onclick="comprobar_editar()">
             <!--<button type="" class="btn btn-primary">Cancelar cambios y volver atras</button>-->
           </form>
 
