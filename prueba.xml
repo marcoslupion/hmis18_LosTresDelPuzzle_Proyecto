@@ -1,8 +1,15 @@
 <?xml version="1.0"?>
 <project name="Proyecto HMIS" default="main">
 <target name="main">
-<exec command=" ./vendor/bin/phpunit">
+<exec command=" ./vendor/bin/phpunit --configuration ">
 </exec>
+<phpdoc2 title="API Documentation"
+ destdir="apidocs"
+ template="responsive">
+ <fileset dir="./">
+ <include name="**/*.php" />
+ </fileset>
+</phpdoc2>
 <!--
 <phpunit pharlocation="/vendor/bin/phpunit">
  <formatter todir="reports" type="xml"/>
