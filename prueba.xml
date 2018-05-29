@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <project name="Proyecto HMIS" default="main">
 <target name="main">
+  <!--
 <phpunit>
  <batchtest>
  <fileset dir="bd">
@@ -8,5 +9,6 @@
  </fileset>
  </batchtest>
 </phpunit>
+-->
 </target>
 </project>
