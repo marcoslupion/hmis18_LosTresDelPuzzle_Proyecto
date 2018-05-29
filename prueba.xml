@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <project name="Proyecto HMIS" default="main">
 <target name="main">
-
+<autoloader autoloaderpath="/vendor/autoloader.php"/>
 <phpunit pharlocation="/vendor/bin/phpunit">
  <formatter todir="reports" type="xml"/>
  <batchtest>
