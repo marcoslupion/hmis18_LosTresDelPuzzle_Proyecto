@@ -1,5 +1,5 @@
 <?php
-use PHPUnit\Framework\TestCase;
+use PHPUnit_Framework_TestCase;
 require "/var/lib/jenkins/workspace/Sesion09-MarcosAlexander/bd/modelo_registro.php";
 
 final class Comprobar_Usuario_Test extends TestCase
