@@ -2,7 +2,7 @@
 <project name="Proyecto HMIS" default="main">
 <target name="main">
 
-<phpunit>
+<phpunit pharlocation="/usr/local/bin/phpunit">
  <formatter todir="reports" type="xml"/>
  <batchtest>
  <fileset dir="test">
