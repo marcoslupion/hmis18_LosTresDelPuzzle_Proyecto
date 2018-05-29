@@ -1,20 +1,6 @@
 <?xml version="1.0"?>
 <project name="Proyecto HMIS" default="main">
- <target name="main">
-<pdosqlexec url="mysql:host=localhost;dbname=test" userid="root"
-password="">
- <transaction src="bd/creacion_bd.sql"/>
- <transaction src="bd/rellenar_bd.sql"/>  
- <formatter type="plain" outfile="archivo_generado_bd_no_se_que_es_esto.txt"/>
-</pdosqlexec>
-</target>
-
-<coverage-setup database="./reports/coverage.db">
- <fileset dir="bd">
- <include name="*modelo*"/>
- </fileset>
-</coverage-setup>
-
+<target name="main">
 <phpunit codecoverage="true">
  <batchtest>
  <fileset dir="test">
@@ -22,26 +8,5 @@ password="">
  </fileset>
  </batchtest>
 </phpunit>
-
-<phpdoc2 title="API Documentation"
- destdir="apidocs"
- template="responsive">
- <fileset dir="./">
- <include name="**/*.php" />
- </fileset>
-</phpdoc2>
-
-<pharpackage
- destfile="./build/package.phar"
- basedir="./">
- <fileset dir="./">
- <include name="**/**" />
- </fileset>
- <metadata>
- <element name="version" value="1.0" />
- <element name="LosTresDelPuzzle">
- </element>
- </element>
- </metadata>
-</pharpackage>
+</target>
 </project>
