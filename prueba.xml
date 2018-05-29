@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <project name="Proyecto HMIS" default="main">
 <target name="main">
-<phpunit codecoverage="true">
+<phpunit>
  <batchtest>
  <fileset dir="test">
  <include name="*.php"/>
