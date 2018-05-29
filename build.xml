@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<project name="Proyecto HMIS">
+<project name="Proyecto HMIS" default="main">
+ <target name="main"></target>
 <pdosqlexec url="mysql:host=localhost;dbname=test" userid="root"
 password="">
  <transaction src="bd/creacion_bd.sql"/>
