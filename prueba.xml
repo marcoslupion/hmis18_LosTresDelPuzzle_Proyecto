@@ -6,7 +6,7 @@
  <formatter todir="reports" type="xml"/>
  <batchtest>
  <fileset dir="test">
-   <include name="Test_Comprobar_Usuario.php">
+   <include name="Test_Comprobar_Usuario.php"/>
  </fileset>
  </batchtest>
 </phpunit>
