@@ -15,9 +15,8 @@ public function inicializar(){
 * @test
 */
 public function comprobar_usuario_no_existe(){
-  $user = "JohnDoe";
-  $pass = "ExPass41";
-  $resultado = $this->iniciar->login($user,$pass);
+  $user = "asdfasdf";
+  $resultado = $this->iniciar->comprobar_usuario($user);
   echo "$resultado";
   $this->assertEquals(1,$resultado);
 }
@@ -26,8 +25,8 @@ public function comprobar_usuario_no_existe(){
 */
 public function comprobar_usuario_existe(){
   $user = "MariaSR";
-  $pass = "1234asd";
-    $resultado = $this->iniciar->login($user,$pass);
+
+  $resultado = $this->iniciar->comprobar_usuario($user);
     $this->assertEquals(0,$resultado);
   }
 
