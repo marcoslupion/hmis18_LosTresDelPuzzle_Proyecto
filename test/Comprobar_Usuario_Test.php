@@ -14,28 +14,19 @@ public function inicializar(){
 /**
 * @test
 */
-public function iniciar_sesion_correcto_admin(){
+public function comprobar_usuario_no_existe(){
   $user = "JohnDoe";
   $pass = "ExPass41";
   $resultado = $this->iniciar->login($user,$pass);
   echo "$resultado";
-  $this->assertEquals(2,$resultado);
+  $this->assertEquals(1,$resultado);
 }
 /**
 * @test
 */
-public function iniciar_sesion_correcto_no_admin(){
+public function comprobar_usuario_existe(){
   $user = "MariaSR";
   $pass = "1234asd";
-    $resultado = $this->iniciar->login($user,$pass);
-    $this->assertEquals(1,$resultado);
-  }
-/**
-* @test
-*/
-public function iniciar_sesion_incorrecto(){
-  $user = "juan";
-  $pass = "12345";
     $resultado = $this->iniciar->login($user,$pass);
     $this->assertEquals(0,$resultado);
   }
