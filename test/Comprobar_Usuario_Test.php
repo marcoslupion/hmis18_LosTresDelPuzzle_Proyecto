@@ -1,15 +1,15 @@
 <?php
 use PHPUnit\Framework\TestCase;
-require "../bd/modelo_login.php";
+require "../bd/modelo_registro.php";
 
-final class Iniciar_Sesion_Test extends TestCase
+final class Comprobar_Usuario_Test extends TestCase
 {
 	private $iniciar;
 /**
 * @before
 */
 public function inicializar(){
-   $this->iniciar=new modelo_login();
+   $this->iniciar=new modelo_registro();
 }
 /**
 * @test

@@ -1,3 +1,4 @@
+use hmis;
 INSERT INTO usuario (user, pass, email, admin, activo)
 VALUES ("User_0547", "csDfr12", "us0547@ramazon.com", false, false);
 INSERT INTO usuario (user, pass, email, admin, activo)
