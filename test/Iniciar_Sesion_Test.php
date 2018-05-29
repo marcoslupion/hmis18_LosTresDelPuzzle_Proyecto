@@ -15,6 +15,8 @@ public function inicializar(){
 * @test
 */
 public function iniciar_sesion_correcto_admin(){
+  $user = "juan";
+  $pass = "12345";
   $resultado = $iniciar->login($user,$pass);
   $this->assertEquals(2,$resultado);
 }
@@ -22,6 +24,8 @@ public function iniciar_sesion_correcto_admin(){
 * @test
 */
 public function iniciar_sesion_correcto_no_admin(){
+  $user = "juan";
+  $pass = "12345";
     $resultado = $iniciar->login($user,$pass);
     $this->assertEquals(1,$resultado);
   }
@@ -29,6 +33,8 @@ public function iniciar_sesion_correcto_no_admin(){
 * @test
 */
 public function iniciar_sesion_incorrecto(){
+  $user = "juan";
+  $pass = "12345";
     $resultado = $iniciar->login($user,$pass);
     $this->assertEquals(0,$resultado);
   }
