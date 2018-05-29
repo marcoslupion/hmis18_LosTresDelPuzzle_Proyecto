@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <project name="Proyecto HMIS" default="main">
 <target name="main">
-  <!--
+
 <phpunit>
  <batchtest>
- <fileset dir="bd">
-   <include name="Test*">
+ <fileset dir="test">
+   <include name="Test_Comprobar_Usuario.php">
  </fileset>
  </batchtest>
 </phpunit>
--->
+
 </target>
 </project>
