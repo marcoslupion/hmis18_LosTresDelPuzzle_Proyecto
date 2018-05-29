@@ -7,7 +7,6 @@ password="">
  <transaction src="bd/rellenar_bd.sql"/>  
  <formatter type="plain" outfile="archivo_generado_bd_no_se_que_es_esto.txt"/>
 </pdosqlexec>
-</target>
 
 <coverage-setup database="./reports/coverage.db">
  <fileset dir="bd">
@@ -44,6 +43,7 @@ password="">
  </element>
  </metadata>
 </pharpackage>
+</target>
 </project>
 
 
