@@ -3,9 +3,6 @@
 <target name="main">
 <phpunit>
  <batchtest>
- <fileset dir="test">
- <include name="Test_Comprobar_Usuario.php"/>
- </fileset>
  <fileset dir="bd">
    <include name="Test*">
  </fileset>
