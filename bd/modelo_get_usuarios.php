@@ -11,6 +11,13 @@ class modelo_get_usuarios extends conexion
       
       return $result;
     }
+    public function usuario($param)
+    {
+      $sql = "select * from  usuario where user='$param'";
+      $result = $this->conn->query($sql);
+      
+      return $result;
+    }
   
 }
 

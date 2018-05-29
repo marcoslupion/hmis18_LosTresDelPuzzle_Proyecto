@@ -1,0 +1,62 @@
+<?php
+use PHPUnit\Framework\TestCase;
+
+
+
+if(!class_exists('modelo_registro')){
+  require "../bd/modelo_registro.php";
+}
+
+if(!class_exists('modelo_usuario')){
+  require "../bd/modelo_usuario.php";
+}
+if(!class_exists('modelo_eliminar_usuario')){
+  require "../bd/modelo_eliminar_usuario.php";
+}
+if(!class_exists('modelo_get_usuarios')){
+  require "../bd/modelo_get_usuarios.php";
+}
+
+
+
+final class Modificar_Usuario_Test extends TestCase
+{
+	private $iniciar;
+/**
+* @before
+*/
+public function inicializar(){
+   $this->iniciar=new modelo_registro();
+   $this->iniciar->crear_usuario("prueba","contrasenia","email");
+   $this->iniciar=new modelo_usuario();
+}
+
+/**
+* @after
+*/
+public function deshacer_cambios(){
+  $this->iniciar=new modelo_eliminar_usuario();
+  $this->iniciar->eliminar_usuario("prueba");
+}
+/**
+* @test
+*/
+public function modificar_correo(){
+  $usuario = "prueba";
+  $correo = "nuevo";
+  $activo = "1";
+  $this->iniciar->modificar_correo($usuario,$correo,$activo);
+
+  $this->iniciar=new modelo_get_usuarios();
+  $resultado = $this->iniciar->usuario($usuario);
+  $params = $resultado->fetch_assoc();
+  $correo = $params["email"];
+  $activo = $params["activo"];
+  $this->assertEquals("nuevo",$correo);
+  $this->assertEquals("1",$activo);
+}
+
+
+
+
+}

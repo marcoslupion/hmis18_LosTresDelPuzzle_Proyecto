@@ -1,6 +1,11 @@
 <?php
 use PHPUnit\Framework\TestCase;
-require "../bd/modelo_registro.php";
+
+
+
+if(!class_exists('modelo_registro')){
+  require "../bd/modelo_registro.php";
+}
 
 final class Comprobar_Usuario_Test extends TestCase
 {

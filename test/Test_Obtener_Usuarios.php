@@ -1,6 +1,11 @@
 <?php
 use PHPUnit\Framework\TestCase;
-require "../bd/modelo_get_usuarios.php";
+
+
+
+if(!class_exists('modelo_registro')){
+  require "../bd/modelo_get_usuarios.php";
+}
 
 final class Obtener_Usuarios_Test extends TestCase
 {
