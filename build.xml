@@ -26,16 +26,15 @@
  </batchtest>
 </phpunit>
 -->
-<exec passthru="true" command="sudo phpdoc run --cache-folder /home/ubuntu/cache -d ./test -t ./api/docs"/>
- <!--
+
 <phpdoc2 title="API Documentation"
  destdir="apidocs"
  template="responsive">
- <fileset dir="./">
+ <fileset dir="./test">
  <include name="**/*.php" />
  </fileset>
 </phpdoc2>
--->
+
 <!--
 <pharpackage
  destfile="./build/package.phar"
