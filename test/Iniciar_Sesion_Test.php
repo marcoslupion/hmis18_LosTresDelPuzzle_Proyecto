@@ -4,7 +4,7 @@ use PHPUnit\Framework\TestCase;
 
 
 
-if(!class_exists('modelo_registro')){
+if(!class_exists('modelo_login')){
   require "modelo_login.php";
 }
 
