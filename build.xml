@@ -43,11 +43,29 @@
  </target>
 
  <target name="package">
+  <pharpackage
+  destfile="./build/web.phar"
+  basedir="./">
+  <fileset dir=".">
+    <include name="*/*" />
+  </fileset>
+  <metadata>
+    <element name="version" value="1.0" />
+    <element name="Autores">
+      <element name="Alexander Bulychev">
+      </element>
+     <element name="Marcos Lupión Lorente">
+      </element>
+    </element>
+  </metadata>
+</pharpackage>
+  <!--
 <zip destfile="web.zip">
  <fileset dir=".">
   <include name="*/*"/>
   </fileset>
  </zip>
+-->
   </target>
 <!--
 <pharpackage
