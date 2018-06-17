@@ -7,21 +7,21 @@ password="">
  <transaction src="bd/rellenar_bd.sql"/>  
  <formatter type="plain" outfile="archivo_generado_bd_no_se_que_es_esto.txt"/>
 </pdosqlexec>
-
+<--!
 <coverage-setup database="./reports/coverage.db">
  <fileset dir="bd">
  <include name="*modelo*"/>
  </fileset>
 </coverage-setup>
-
-<phpunit codecoverage="true">
+-->
+<phpunit codecoverage="false" pharlocation="/home/ubuntu/phpunit">
  <batchtest>
  <fileset dir="test">
  <include name="*.php"/>
  </fileset>
  </batchtest>
 </phpunit>
-
+<--!
 <phpdoc2 title="API Documentation"
  destdir="apidocs"
  template="responsive">
@@ -45,5 +45,5 @@ password="">
 </pharpackage>
 </target>
 </project>
-
+-->
 
