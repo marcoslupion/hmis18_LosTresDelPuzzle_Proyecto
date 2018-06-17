@@ -16,17 +16,18 @@
  </fileset>
 </coverage-setup>
 -->
+ <!--
  <exec passthru="true" command="phpunit --configuration test/phpunit.xml" />
  <exec passthru="true" dir="." command="phpunit --log-junit reports/junitreport.xml test/">
- <!--
-<phpunit>
+-->
+<phpunit pharlocation="/usr/local/bin/phpunit-7.2.phar">
  <batchtest>
  <fileset dir="test">
  <include name="*.php"/>
  </fileset>
  </batchtest>
 </phpunit>
--->
+
 
 <phpdoc2 pharlocation="/usr/local/bin/phpDocumentor.phar" title="API Documentation" destdir="./apidocs" template="checkstyle">
  <fileset dir="./test">
