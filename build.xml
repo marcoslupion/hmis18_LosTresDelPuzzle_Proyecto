@@ -2,8 +2,7 @@
 <project name="Proyecto HMIS" default="main">
 <target name="main">
  
- <pdosqlexec url="mysql:host=localhost;dbname=test" userid="root"
-password="">
+ <pdosqlexec url="mysql:host=localhost;dbname=test" userid="root" password="">
  <transaction src="bd/creacion_bd.sql"/>
  <transaction src="bd/rellenar_bd.sql"/>  
   <!--
