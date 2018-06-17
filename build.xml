@@ -1,13 +1,14 @@
 <?xml version="1.0"?>
 <project name="Proyecto HMIS" default="main">
- <target name="main">
-<pdosqlexec url="mysql:host=localhost;dbname=test" userid="root"
+<target name="main">
+<!--
+ <pdosqlexec url="mysql:host=localhost;dbname=test" userid="root"
 password="">
  <transaction src="bd/creacion_bd.sql"/>
  <transaction src="bd/rellenar_bd.sql"/>  
  <formatter type="plain" outfile="archivo_generado_bd_no_se_que_es_esto.txt"/>
 </pdosqlexec>
-<!--
+
 <coverage-setup database="./reports/coverage.db">
  <fileset dir="bd">
  <include name="*modelo*"/>
