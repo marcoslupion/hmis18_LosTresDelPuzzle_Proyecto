@@ -43,6 +43,7 @@
  </target>
 
  <target name="package">
+  <!--
   <pharpackage
   destfile="./build/web.phar"
   basedir="./">
@@ -59,13 +60,13 @@
     </element>
   </metadata>
 </pharpackage>
-  <!--
-<zip destfile="web.zip">
+  -->
+<zip destfile="build/web.zip">
  <fileset dir=".">
   <include name="*/*"/>
   </fileset>
  </zip>
--->
+
   </target>
 <!--
 <pharpackage
