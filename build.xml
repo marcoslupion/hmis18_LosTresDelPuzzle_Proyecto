@@ -15,7 +15,7 @@ password="">
  </fileset>
 </coverage-setup>
 -->
- <exec command="phpunit --configuration test/phpunit.xml" />
+ <exec passthru="true" command="phpunit --configuration test/phpunit.xml" />
  <!--
 <phpunit>
  <batchtest>
