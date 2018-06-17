@@ -26,7 +26,8 @@
  </batchtest>
 </phpunit>
 -->
-
+<exec passthru="true" command="phpdoc -d test -t ./apidocs"/>
+ <!--
 <phpdoc2 title="API Documentation"
  destdir="apidocs"
  template="responsive">
@@ -34,6 +35,7 @@
  <include name="**/*.php" />
  </fileset>
 </phpdoc2>
+-->
 <!--
 <pharpackage
  destfile="./build/package.phar"
