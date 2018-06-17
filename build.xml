@@ -28,7 +28,8 @@
 -->
 
 <phpdoc2 pharlocation="/usr/local/bin/phpDocumentor.phar" title="API Documentation"
- destdir="./apidocs">
+ destdir="./apidocs"
+ template="responsive-twig">
  <fileset dir="./test">
  <include name="*.php" />
  </fileset>
