@@ -4,6 +4,7 @@
     <directory>test</directory>
   </testsuite>
 </testsuites>
+<!--
 <filter>
     <whitelist processUncoveredFilesFromWhitelist="true">
         <directory>test</directory>
@@ -14,5 +15,5 @@
        highLowerBound="70"/>
   <log type="coverage-text" target="php://stdout" showUncoveredFiles="false"/>
 </logging>
+-->
 </phpunit>
-
