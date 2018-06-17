@@ -15,7 +15,7 @@ password="">
  </fileset>
 </coverage-setup>
 -->
-<phpunit codecoverage="false" pharlocation="/home/ubuntu/phpunit-7.2.phar">
+<phpunit codecoverage="false" pharlocation="/usr/local/bin/phpunit-7.2.phar">
  <batchtest>
  <fileset dir="test">
  <include name="*.php"/>
