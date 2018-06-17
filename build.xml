@@ -7,7 +7,7 @@ password="">
  <transaction src="bd/rellenar_bd.sql"/>  
  <formatter type="plain" outfile="archivo_generado_bd_no_se_que_es_esto.txt"/>
 </pdosqlexec>
-<--!
+<!--
 <coverage-setup database="./reports/coverage.db">
  <fileset dir="bd">
  <include name="*modelo*"/>
@@ -21,7 +21,7 @@ password="">
  </fileset>
  </batchtest>
 </phpunit>
-<--!
+<!--
 <phpdoc2 title="API Documentation"
  destdir="apidocs"
  template="responsive">
