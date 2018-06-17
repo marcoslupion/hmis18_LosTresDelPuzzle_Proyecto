@@ -26,7 +26,7 @@
  </batchtest>
 </phpunit>
 -->
-<exec passthru="true" command="phpdoc run --cache-folder ./cache -d ./test -t ./api/docs"/>
+<exec passthru="true" command="phpdoc run --cache-folder /cache -d ./test -t ./api/docs"/>
  <!--
 <phpdoc2 title="API Documentation"
  destdir="apidocs"
