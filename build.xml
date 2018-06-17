@@ -16,10 +16,7 @@
  </fileset>
 </coverage-setup>
 -->
- <!--
- <exec passthru="true" command="phpunit --configuration test/phpunit.xml" />
- <exec passthru="true" dir="." command="phpunit --log-junit reports/junitreport.xml test/">
--->
+
 <phpunit pharlocation="/usr/local/bin/phpunit-7.2.phar">
  <batchtest>
  <fileset dir="test">
