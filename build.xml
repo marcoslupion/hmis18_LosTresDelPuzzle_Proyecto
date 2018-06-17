@@ -17,6 +17,13 @@
 </coverage-setup>
 -->
 
+<exec dir="."
+ command="phpunit --log-junit 'reports/unitreport.xml'
+ --coverage-html 'reports/coverage'
+ --coverage-clover 'reports/coverage/coverage.xml'
+ test/"
+/>
+ <!--
 <phpunit pharlocation="/usr/local/bin/phpunit-7.2.phar">
  <batchtest>
  <fileset dir="./test">
@@ -24,7 +31,7 @@
  </fileset>
  </batchtest>
 </phpunit>
-
+-->
 
 <phpdoc2 pharlocation="/usr/local/bin/phpDocumentor.phar" title="API Documentation" destdir="./apidocs" template="checkstyle">
  <fileset dir="./test">
