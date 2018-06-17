@@ -17,6 +17,7 @@
 </coverage-setup>
 -->
  <exec passthru="true" command="phpunit --configuration test/phpunit.xml" />
+ <exec passthru="true" dir="." command="phpunit --log-junit reports/junitreport.xml test/">
  <!--
 <phpunit>
  <batchtest>
