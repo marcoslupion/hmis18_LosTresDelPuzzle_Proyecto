@@ -27,7 +27,7 @@
 </phpunit>
 -->
 
-<phpdoc2 pharlocation="/usr/local/bin/phpDocumentor.phar" title="API Documentation" destdir="./apidocs" template="responsive">
+<phpdoc2 pharlocation="/usr/local/bin/phpDocumentor.phar" title="API Documentation" destdir="./apidocs" template="clean">
  <fileset dir="./test">
  <include name="*.php" />
  </fileset>
