@@ -1,12 +1,12 @@
 <phpunit>
 <testsuites>
   <testsuite name="small">
-    <directory>C:\xampp\htdocs\dashboard\gitHub\hmis18_LosTresDelPuzzle_Proyecto\test</directory>
+    <directory>test</directory>
   </testsuite>
 </testsuites>
 <filter>
     <whitelist processUncoveredFilesFromWhitelist="true">
-        <directory>C:\xampp\htdocs\dashboard\gitHub\hmis18_LosTresDelPuzzle_Proyecto\test</directory>
+        <directory>test</directory>
     </whitelist>
 </filter>
 <logging>
