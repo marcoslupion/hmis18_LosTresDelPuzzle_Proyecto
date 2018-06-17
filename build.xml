@@ -20,7 +20,7 @@
 <exec passthru="true" dir="."
  command="phpunit --log-junit 'reports/unitreport.xml'
  --coverage-html 'reports/coverage'
- --coverage-clover 'reports/coverage/coverage.xml'
+ --coverage-clover 'reports/clover-coverage'
  --whitelist test/
  test/"
 />
