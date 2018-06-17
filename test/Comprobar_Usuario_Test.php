@@ -4,7 +4,7 @@ use PHPUnit\Framework\TestCase;
 
 
 if(!class_exists('modelo_registro')){
-  require "../bd/modelo_registro.php";
+  require "modelo_registro.php";
 }
 
 final class Comprobar_Usuario_Test extends TestCase

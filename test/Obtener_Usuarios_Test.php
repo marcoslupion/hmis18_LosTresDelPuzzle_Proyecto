@@ -4,7 +4,7 @@ use PHPUnit\Framework\TestCase;
 
 
 if(!class_exists('modelo_registro')){
-  require "../bd/modelo_get_usuarios.php";
+  require "modelo_get_usuarios.php";
 }
 
 final class Obtener_Usuarios_Test extends TestCase
@@ -20,9 +20,9 @@ public function inicializar(){
 * @test
 */
 public function devolver_usuarios(){
- 
+
   $resultado = $this->iniciar->usuarios();
- 
+
   $this->assertEquals(4, $resultado->num_rows);
 }
 

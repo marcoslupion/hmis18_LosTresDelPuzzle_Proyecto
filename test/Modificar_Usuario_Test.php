@@ -4,17 +4,17 @@ use PHPUnit\Framework\TestCase;
 
 
 if(!class_exists('modelo_registro')){
-  require "../bd/modelo_registro.php";
+  require "modelo_registro.php";
 }
 
 if(!class_exists('modelo_usuario')){
-  require "../bd/modelo_usuario.php";
+  require "modelo_usuario.php";
 }
 if(!class_exists('modelo_eliminar_usuario')){
-  require "../bd/modelo_eliminar_usuario.php";
+  require "modelo_eliminar_usuario.php";
 }
 if(!class_exists('modelo_get_usuarios')){
-  require "../bd/modelo_get_usuarios.php";
+  require "modelo_get_usuarios.php";
 }
 
 

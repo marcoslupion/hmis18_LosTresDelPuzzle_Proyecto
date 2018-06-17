@@ -4,10 +4,10 @@ use PHPUnit\Framework\TestCase;
 
 
 if(!class_exists('modelo_registro')){
-  require "../bd/modelo_registro.php";
+  require "modelo_registro.php";
 }
 if(!class_exists('modelo_eliminar_usuario')){
-  require "../bd/modelo_eliminar_usuario.php";
+  require "modelo_eliminar_usuario.php";
 }
 
 
@@ -20,7 +20,7 @@ final class Eliminar_Usuario_Test extends TestCase
 public function inicializar(){
 
    $this->iniciar=new modelo_eliminar_usuario();
- 
+
 
 }
 /**

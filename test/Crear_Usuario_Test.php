@@ -4,11 +4,11 @@ use PHPUnit\Framework\TestCase;
 
 
 if(!class_exists('modelo_registro')){
-  require "../bd/modelo_registro.php";
+  require "modelo_registro.php.php";
 }
 
 if(!class_exists('modelo_eliminar_usuario')){
-  require "../bd/modelo_eliminar_usuario.php";
+  require "modelo_eliminar_usuario.php";
 }
 
 
@@ -36,7 +36,7 @@ public function crear_nuevo_usuario_no_admin(){
 
   $this->iniciar=new modelo_eliminar_usuario();
   $resultado = $this->iniciar->eliminar_usuario($a);
-  
+
 }
 /**
 * @test
@@ -53,7 +53,7 @@ public function crear_nuevo_usuario_admin(){
 
   $this->iniciar=new modelo_eliminar_usuario();
   $resultado = $this->iniciar->eliminar_usuario($a);
-  
+
 }
 
 
