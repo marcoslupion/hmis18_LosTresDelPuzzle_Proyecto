@@ -28,10 +28,10 @@
 -->
 
 <phpdoc2 pharlocation="/usr/local/bin/phpDocumentor.phar" title="API Documentation"
- destdir="apidocs"
+ destdir="./apidocs"
  template="responsive">
  <fileset dir="./test">
- <include name="**/*.php" />
+ <include name="*.php" />
  </fileset>
 </phpdoc2>
 
