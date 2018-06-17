@@ -40,6 +40,11 @@
  </fileset>
 </phpdoc2>
 
+<zip destfile="web.zip">
+ <fileset dir=".">
+  <include name="*/*"/>
+  </fileset>
+ </zip>
 <!--
 <pharpackage
  destfile="./build/package.phar"
