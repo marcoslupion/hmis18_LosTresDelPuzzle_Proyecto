@@ -63,7 +63,7 @@
   -->
 <zip destfile="build/web.zip">
  <fileset dir=".">
-  <include name="*"/>
+  <include name="**"/>
   </fileset>
  </zip>
 
