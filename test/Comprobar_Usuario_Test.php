@@ -4,9 +4,12 @@ use PHPUnit\Framework\TestCase;
 
 
 if(!class_exists('modelo_registro')){
-  require "../bd/modelo_registro.php";
+  require "modelo_registro.php";
 }
-
+/**
+** Test que comprueba el modelo registro
+**
+**/
 final class Comprobar_Usuario_Test extends TestCase
 {
 	private $iniciar;

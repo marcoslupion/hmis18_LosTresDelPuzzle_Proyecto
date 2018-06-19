@@ -45,7 +45,7 @@
             <tbody>
             <?php
 
-            include '../bd/controlador_get_usuarios.php';
+            include '../test/controlador_get_usuarios.php';
 
               if($resultado->num_rows>0) {
 
@@ -66,7 +66,7 @@
                   }
 
                   echo"<td class='contenedor'>
-                    <a href='../bd/controlador_eliminar_usuario.php?valor=".$row["user"]."'><i class='fa fa-trash-o' style='font-size:24px' ></i></a>
+                    <a href='../test/controlador_eliminar_usuario.php?valor=".$row["user"]."'><i class='fa fa-trash-o' style='font-size:24px' ></i></a>
                     <i class='fa fa-pencil-square-o' id='editar_datos_fafa' style='font-size:24px' onclick='ventana_admin(3,$contador)'></i>
                   </td>
                 </tr>";
@@ -80,7 +80,7 @@
 
             </tbody>
           </table>
-          <form id="crear_user" class="ocultar" action="../bd/controlador_crear_usuario.php" class="sign-up-htm" method="post">
+          <form id="crear_user" class="ocultar" action="../test/controlador_crear_usuario.php" class="sign-up-htm" method="post">
               <div class="form-group ">
               <label for="exampleInputEmail1">Nombre de usuario</label>
               <input id="user_r" name="user_r" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Introduzca el nombre de usuario">
@@ -102,7 +102,7 @@
           </div>
           </form>
 
-          <form id="editar_datos" class="ocultar" action="../bd/controlador_editar.php" method="post">
+          <form id="editar_datos" class="ocultar" action="../test/controlador_editar.php" method="post">
             <div class="form-group ">
               <label for="exampleInputEmail1">Nombre de usuario</label>
               <input id="user_editar" type="text" class="form-control" aria-describedby="emailHelp" name="user_editar" placeholder="Introduzca el nombre de usuario" value="">

@@ -20,7 +20,7 @@
       <label for="tab-2" class="tab">Sign Up</label>
       <div class="login-form">
         <div class="sign-in-htm">
-        <form id="form" action="bd/controlador_login.php" class="sign-in-htm" method="post">
+        <form id="form" action="test/controlador_login.php" class="sign-in-htm" method="post">
           <div class="php"></div>
           <div class="group">
             <label for="user" class="label">Username</label>
@@ -44,7 +44,7 @@
           </form>
         </div>
         <div class="sign-up-htm">
-          <form id="form_r" action="bd/controlador_registro.php" class="sign-up-htm" method="post">
+          <form id="form_r" action="test/controlador_registro.php" class="sign-up-htm" method="post">
           <div class="group">
             <label for="user_r" class="label">Username</label>
             <input id="user_r" type="text" class="input" name="user_r">

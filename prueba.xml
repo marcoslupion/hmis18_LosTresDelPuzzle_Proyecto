@@ -3,6 +3,7 @@
 <target name="main">
 <exec command=" ./vendor/bin/phpunit --configuration ">
 </exec>
+ <!--
 <phpdoc2 title="API Documentation"
  destdir="apidocs"
  template="responsive">
@@ -10,8 +11,8 @@
  <include name="**/*.php" />
  </fileset>
 </phpdoc2>
-<!--
-<phpunit pharlocation="/vendor/bin/phpunit">
+-->
+<phpunit pharlocation="/home/ubuntu/phpunit">
  <formatter todir="reports" type="xml"/>
  <batchtest>
  <fileset dir="test">
@@ -19,6 +20,6 @@
  </fileset>
  </batchtest>
 </phpunit>
--->
+
 </target>
 </project>

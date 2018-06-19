@@ -1,18 +1,19 @@
 <phpunit>
 <testsuites>
   <testsuite name="small">
-    <directory>C:\xampp\htdocs\dashboard\gitHub\hmis18_LosTresDelPuzzle_Proyecto\test</directory>
+    <directory>.</directory>
   </testsuite>
 </testsuites>
+<!--
 <filter>
     <whitelist processUncoveredFilesFromWhitelist="true">
-        <directory>C:\xampp\htdocs\dashboard\gitHub\hmis18_LosTresDelPuzzle_Proyecto\test</directory>
+        <directory>test</directory>
     </whitelist>
 </filter>
 <logging>
-  <log type="coverage-html" target="C:\xampp\tmp\report" lowUpperBound="35"
+  <log type="coverage-html" target="report" lowUpperBound="35"
        highLowerBound="70"/>
   <log type="coverage-text" target="php://stdout" showUncoveredFiles="false"/>
 </logging>
+-->
 </phpunit>
-

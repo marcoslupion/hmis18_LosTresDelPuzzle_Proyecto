@@ -4,8 +4,8 @@ use PHPUnit\Framework\TestCase;
 
 
 
-if(!class_exists('modelo_registro')){
-  require "../bd/modelo_login.php";
+if(!class_exists('modelo_login')){
+  require "modelo_login.php";
 }
 
 final class Iniciar_Sesion_Test extends TestCase
