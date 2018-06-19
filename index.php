@@ -20,6 +20,7 @@
       <label for="tab-2" class="tab">Sign Up</label>
       <div class="login-form">
         <div class="sign-in-htm">
+
         <form id="form" action="test/controlador_login.php" class="sign-in-htm" method="post">
           <div class="php"></div>
           <div class="group">
@@ -62,7 +63,7 @@
           </div>
           <div class="group">
             <label for="email_r" class="label">Email Address</label>
-            <input id="email_r" type="text" class="input" name="email_r">
+            <input id="email_r" type="email" class="input" name="email_r">
             <div id="no_email"></div>
           </div>
           <div class="group">

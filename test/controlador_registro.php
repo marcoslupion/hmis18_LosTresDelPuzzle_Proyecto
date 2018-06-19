@@ -8,11 +8,18 @@ $email=$_POST["email_r"];
 $modelo_registro = new modelo_registro();
 
 $resultado = $modelo_registro->comprobar_usuario($user);
+if($pass!=$_POST["pass_r2"]){
+  echo"<label>Las contraseñas no coinciden, vuelva atrás para registrarse de nuevo</br>";
+  echo"<button class='btn btn-primary' value='Volver a inicio' onclick='volver_a_inicio()'>Volver a inicio de sesion</Button>";
+}
 if($resultado==0){
-  echo "<script>usuario_ya_existe();document.location.assign('../');</script>";
+  
+  echo"<label>El usuario ya existe, vuelva a registrarse con un nombre de usuario diferente </br>";
+  echo"<button class='btn btn-primary' value='Volver a inicio' onclick='volver_a_inicio()'>Volver a inicio de sesion</Button>";
 }else{
   $modelo_registro->crear_usuario($user,$pass,$email);
-  echo "<script>usuario_creado();document.location.assign('../');</script>";
+  echo"<label>El usuario ha sido creado con exito, vuelve a inicio para iniciar sesión</br>";
+  echo"<button class='btn btn-primary' value='Volver a inicio' onclick='volver_a_inicio()'>Volver a inicio de sesion</Button>";
 }
 
 ?>

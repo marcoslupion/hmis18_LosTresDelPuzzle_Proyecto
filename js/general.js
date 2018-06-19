@@ -229,3 +229,9 @@ function crear_usuario_admin(){
 
   var f = document.getElementById("crear_user").submit();
 }
+function volver_a_inicio(){
+  document.location.assign('../');
+}
+function volver_atras(){
+  document.location.assign('../vistas/ventana_administrador.php');
+}
