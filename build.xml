@@ -35,7 +35,7 @@
 </phpunit>
 -->
 <target name="documentation">
-<phpdoc2 pharlocation="/usr/local/bin/phpDocumentor.phar" title="API Documentation" destdir="./apidocs" template="checkstyle">
+<phpdoc2 pharlocation="/usr/local/bin/phpDocumentor.phar" title="API Documentation" destdir="./apidocs" template="responsive">
  <fileset dir="./test">
  <include name="*.php" />
  </fileset>
