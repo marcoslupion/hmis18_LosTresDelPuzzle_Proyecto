@@ -80,6 +80,7 @@
 
             </tbody>
           </table>
+          <form id="ignorar"></form>
           <form id="crear_user" class="ocultar" action="../test/controlador_crear_usuario.php" class="sign-up-htm" method="post">
               <div class="form-group ">
               <label for="exampleInputEmail1">Nombre de usuario</label>
@@ -98,7 +99,7 @@
               <input id="pass_r2" name="pass_r2" type="password" class="form-control" placeholder="Repita la contraseña">
             </div>
             <div class="group">
-            <input id="bt_submit_crear" class="btn btn-primary button" value="Sign Up" onclick="crear_usuario_admin()">
+            <input id="bt_submit_crear" class="btn btn-primary boton_general" value="Sign Up" onclick="crear_usuario_admin()">
           </div>
           </form>
 
