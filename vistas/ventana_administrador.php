@@ -17,6 +17,8 @@
   <div class="container-fluid mx-auto encabezado">
     <h3 class="centrado">Administrar</h3>
     <p class="centrado">Usuario: </p>
+    <form action="../bd/controlador_sesion.php" method="post">
+    <input id="bt_logout" type="submit" class="button" value="Log out">
   </div>
   <div class="container">
     <div class="row">
