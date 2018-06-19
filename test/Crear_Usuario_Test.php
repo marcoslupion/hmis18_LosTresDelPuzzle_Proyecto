@@ -49,7 +49,7 @@ public function crear_nuevo_usuario_admin(){
 
   $resultado = $this->iniciar->comprobar_usuario_admin($a);
 
-  $this->assertEquals(1,$resultado);
+  $this->assertEquals(0,$resultado);
 
   $this->iniciar=new modelo_eliminar_usuario();
   $resultado = $this->iniciar->eliminar_usuario($a);
