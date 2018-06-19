@@ -5,17 +5,12 @@ include 'modelo_registro.php';
 $user=$_POST["user_r"];
 $pass=$_POST["pass_r"];
 $email=$_POST["email_r"];
-$pass2 = $_POST["pass_r2"];
 
 $modelo_registro = new modelo_registro();
 
 $resultado = $modelo_registro->comprobar_usuario($user);
-if($pass!=$_POST["pass_r2"]){
-  echo"<label>Las contraseñas no coinciden, vuelva atrás para registrarse de nuevo</br>";
-  echo"<button class='btn btn-primary' value='Volver a inicio' onclick='volver_a_inicio()'>Volver a inicio de sesion</Button>";
-}
 if($resultado==0){
-  
+
   echo"<label>El usuario ya existe, vuelva a registrarse con un nombre de usuario diferente </br>";
   echo"<button class='btn btn-primary' value='Volver a inicio' onclick='volver_a_inicio()'>Volver a inicio de sesion</Button>";
 }else{
