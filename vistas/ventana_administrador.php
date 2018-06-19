@@ -83,15 +83,15 @@
           <form id="crear_user" class="ocultar" action="../test/controlador_crear_usuario.php" class="sign-up-htm" method="post">
               <div class="form-group ">
               <label for="exampleInputEmail1">Nombre de usuario</label>
-              <input id="user_r" name="user_r" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Introduzca el nombre de usuario">
+              <input id="user_r" name="user_r" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Introduzca el nombre de usuario" required>
             </div>
             <div class="form-group ">
               <label for="exampleInputEmail1">Correo electrónico</label>
-              <input id="email_r" name="email_r" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Introduzca el correo electrónico">
+              <input id="email_r" name="email_r" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Introduzca el correo electrónico" required>
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Contraseña</label>
-              <input id="pass_r" name="pass_r" type="password" class="form-control" placeholder="Introduzca la contraseña">
+              <input id="pass_r" name="pass_r" type="password" class="form-control" placeholder="Introduzca la contraseña" required>
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Repetir contraseña</label>
@@ -105,22 +105,22 @@
           <form id="editar_datos" class="ocultar" action="../test/controlador_editar.php" method="post">
             <div class="form-group ">
               <label for="exampleInputEmail1">Nombre de usuario</label>
-              <input id="user_editar" type="text" class="form-control" aria-describedby="emailHelp" name="user_editar" placeholder="Introduzca el nombre de usuario" value="">
-              <input id="user_rep" name="user_rep" type="text" value="">
+              <input id="user_editar" type="text" class="form-control" aria-describedby="emailHelp" name="user_editar" placeholder="Introduzca el nombre de usuario" value="" required>
+              <input id="user_rep" name="user_rep" type="text" value="" >
 
             </div>
             <div class="form-group ">
               <label for="exampleInputEmail1">Correo electrónico</label>
-              <input  id="email_editar" type="email" class="form-control" aria-describedby="emailHelp" name="email_editar" placeholder="Introduzca el correo electrónico" value="">
+              <input  id="email_editar" type="email" class="form-control" aria-describedby="emailHelp" name="email_editar" placeholder="Introduzca el correo electrónico" value="" required>
 
             </div>
             <div class="form-group">
               <label  for="exampleInputPassword1">Contraseña</label>
-              <input id="pass1_editar" type="text" class="form-control" name="pass1_editar" placeholder="Introduzca la contraseña" value="">
+              <input id="pass1_editar" type="text" class="form-control" name="pass1_editar" placeholder="Introduzca la contraseña" value="" required>
             </div>
             <div class="form-group">
               <label  for="exampleInputPassword1">Repetir contraseña</label>
-              <input id="pass2_editar" type="text" class="form-control" name="pass2_editar" placeholder="Introduzca la contraseña" value="">
+              <input id="pass2_editar" type="text" class="form-control" name="pass2_editar" placeholder="Introduzca la contraseña" value="" required>
             </div>
             <div class="form-group form-check">
                <label for="activo_editar" class="form-check-label">

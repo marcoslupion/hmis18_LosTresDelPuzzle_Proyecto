@@ -25,12 +25,12 @@
           <div class="php"></div>
           <div class="group">
             <label for="user" class="label">Username</label>
-            <input id="user" type="text" class="input" name="user">
+            <input id="user" type="text" class="input" name="user" required>
             <div id="no_user"></div>
           </div>
           <div class="group">
             <label for="pass" class="label">Password</label>
-            <input id="pass" type="password" class="input" data-type="password" name="pass">
+            <input id="pass" type="password" class="input" data-type="password" name="pass" required>
             <div id="no_pass"></div>
           </div>
           <!--
@@ -48,22 +48,22 @@
           <form id="form_r" action="test/controlador_registro.php" class="sign-up-htm" method="post">
           <div class="group">
             <label for="user_r" class="label">Username</label>
-            <input id="user_r" type="text" class="input" name="user_r">
+            <input id="user_r" type="text" class="input" name="user_r" required>
             <div id="no_user_r"></div>
           </div>
           <div class="group">
             <label for="pass_r" class="label">Password</label>
-            <input id="pass_r" type="password" class="input" data-type="password" name="pass_r">
+            <input id="pass_r" type="password" class="input" data-type="password" name="pass_r" required>
             <div id="no_pass_r1"></div>
           </div>
           <div class="group">
             <label for="pass_r2" class="label">Repeat Password</label>
-            <input id="pass_r2" type="password" class="input" data-type="password">
+            <input id="pass_r2" type="password" class="input" data-type="password" required>
             <div id="no_pass_r2"></div>
           </div>
           <div class="group">
             <label for="email_r" class="label">Email Address</label>
-            <input id="email_r" type="email" class="input" name="email_r">
+            <input id="email_r" type="email" class="input" name="email_r" required>
             <div id="no_email"></div>
           </div>
           <div class="group">

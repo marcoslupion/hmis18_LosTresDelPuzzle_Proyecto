@@ -5,6 +5,8 @@ include 'modelo_registro.php';
 $user=$_POST["user_r"];
 $pass=$_POST["pass_r"];
 $email=$_POST["email_r"];
+$pass2 = $_POST["pass_r2"];
+
 $modelo_registro = new modelo_registro();
 
 $resultado = $modelo_registro->comprobar_usuario($user);
