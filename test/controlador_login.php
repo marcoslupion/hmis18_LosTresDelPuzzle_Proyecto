@@ -15,7 +15,8 @@ $resultado = $modelo_login->login($user,$pass);
 $_POST["resultado"]=$resultado;
 if($resultado==0)
 {
-  echo"<label>Datos introducidos incorrectos. Vuelva a iniciar sesion <label></br>";
+  echo"<p id='incorrectos'>Datos incorrectos<p>";
+  echo"</br>";
   echo"<button class='btn btn-primary' value='Volver a inicio' onclick='volver_a_inicio()'>Volver a inicio de sesion</Button>";
  // $script = "<script>login_incorrecto(); document.location.assign('../');</script>";
   //echo $script;
