@@ -1,4 +1,7 @@
 <?php
+/**
+ * @codeCoverageIgnore
+ */
 @session_start();
 if(!isset($_SESSION["no_admin"]))
   {
