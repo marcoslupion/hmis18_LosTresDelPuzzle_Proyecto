@@ -22,7 +22,8 @@
  command="phpunit --log-junit 'reports/unitreport.xml'
  --coverage-html 'reports/coverage'
  --coverage-clover 'reports/clover-coverage.xml'
- --whitelist test/ test/"/>
+ --whitelist test/
+ --blacklist test/controlador* test/"/>
  </target>
  <!--
 <phpunit pharlocation="/usr/local/bin/phpunit-7.2.phar">
