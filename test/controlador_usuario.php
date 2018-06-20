@@ -1,6 +1,7 @@
-<script src="../js/general.js"></script>
 <?php
+
 // @codeCoverageIgnoreStart
+echo "<script src='../js/general.js'></script>";
 include 'modelo_usuario.php';
 @session_start();
 $usuario=$_SESSION["usuario"];

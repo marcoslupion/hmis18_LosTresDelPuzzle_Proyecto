@@ -51,8 +51,11 @@ public function comprobar_usuario_existe(){
   */
   public function comporobar_usuario_activo(){
     $user = "prueba";
-    $resultado = $this->usuario->comprobar_usuario($user);
-    $this->assertEquals(0,$resultado);
+    $result = $this->usuario->comprobar_usuario($user);
+
+    while($resultado = $result->fetch_assoc()){
+      $this->assertEquals(0,$resultado["activo"]);
+    }
   }
 /**
 * @after
