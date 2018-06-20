@@ -10,10 +10,10 @@ while($resultado = $result->fetch_assoc())
   if($resultado["activo"]==1)
   {
 
-    echo "<label>El usuario esta activo</label>";
+    echo "<p id='activo'>El usuario esta activo</p>";
   }else
   {
-    echo "<label>El usuario esta activo</label>";
+    echo "<p id='no_activo'>El usuario no esta activo</p>";
   }
 }
 
