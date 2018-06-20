@@ -1,6 +1,7 @@
-<script src="../js/general.js"></script>
+
 <?php
 // @codeCoverageIgnoreStart
+echo "<script src='../js/general.js'></script>";
 include 'modelo_registro.php';
 
 $user=$_POST["user_r"];

@@ -1,6 +1,7 @@
-<script src="../js/general.js"></script>
+
 <?php
 // @codeCoverageIgnoreStart
+echo "<script src='../js/general.js'></script>";
 include 'modelo_eliminar_usuario.php';
 include 'modelo_usuario.php';
 include 'modelo_registro.php';
