@@ -1,5 +1,6 @@
 <script src="../js/general.js"></script>
 <?php
+// @codeCoverageIgnoreStart
 include 'modelo_registro.php';
 
 $user=$_POST["user_r"];
@@ -18,5 +19,5 @@ if($resultado==0){
   echo"<p id='creado'>El usuario ha sido creado con exito, vuelve a inicio para iniciar sesión<p></br>";
   echo"<button class='btn btn-primary' value='Volver a inicio' onclick='volver_a_inicio()'>Volver a inicio de sesion</Button>";
 }
-
+// @codeCoverageIgnoreEnd
 ?>

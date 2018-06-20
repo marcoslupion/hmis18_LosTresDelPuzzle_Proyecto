@@ -1,5 +1,6 @@
 <script src="../js/general.js"></script>
 <?php
+// @codeCoverageIgnoreStart
 include 'modelo_registro.php';
 
 $user=$_POST["user_r"];
@@ -36,4 +37,5 @@ if($resultado==0){
 
 }
 }
+// @codeCoverageIgnoreEnd
 ?>

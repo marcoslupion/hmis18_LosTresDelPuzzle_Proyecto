@@ -6,7 +6,6 @@ use PHPUnit\Framework\TestCase;
 if(!class_exists('modelo_registro')){
   require "modelo_registro.php";
 }
-
 if(!class_exists('modelo_usuario')){
   require "modelo_usuario.php";
 }

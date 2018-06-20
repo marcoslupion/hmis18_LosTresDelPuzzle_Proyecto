@@ -23,7 +23,7 @@ public function devolver_usuarios(){
 
   $resultado = $this->iniciar->usuarios();
 
-  $this->assertEquals(4, $resultado->num_rows);
+  $this->assertEquals(1, $resultado->num_rows);
 }
 
 

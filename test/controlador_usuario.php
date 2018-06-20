@@ -1,5 +1,6 @@
 <script src="../js/general.js"></script>
 <?php
+// @codeCoverageIgnoreStart
 include 'modelo_usuario.php';
 @session_start();
 $usuario=$_SESSION["usuario"];
@@ -17,5 +18,5 @@ while($resultado = $result->fetch_assoc())
   }
 }
 
-
+// @codeCoverageIgnoreEnd
  ?>

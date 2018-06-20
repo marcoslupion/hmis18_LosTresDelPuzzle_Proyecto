@@ -14,11 +14,13 @@ if(!class_exists('modelo_eliminar_usuario')){
 final class Eliminar_Usuario_Test extends TestCase
 {
 	private $iniciar;
+  private $crear_user;
 /**
 * @before
 */
 public function inicializar(){
-
+   $this->crear_user=new modelo_registro();
+   $this->crear_user->crear_usuario("user","pass","email");
    $this->iniciar=new modelo_eliminar_usuario();
 
 
@@ -27,20 +29,9 @@ public function inicializar(){
 * @test
 */
 public function eliminar_usuario(){
-  //creamos un usuario para despues eliminarlo
- $insert = new modelo_registro();
- $var = $insert->crear_usuario("user","pass","email");
- $res = $insert->comprobar_usuario("user");
-//res tiene que ser 0 para que el usuario exista
-$this->assertEquals(0,$res);
   $resultado = $this->iniciar->eliminar_usuario("user");
+  $res = $this->crear_user->comprobar_usuario("user");
 
-  $res = $insert->comprobar_usuario("user");
- //res ahora tiene que ser 1 ver que no esta el objeto
   $this->assertEquals(1,$res);
 }
-
-
-
-
 }

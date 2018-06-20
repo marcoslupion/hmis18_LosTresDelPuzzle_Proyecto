@@ -26,23 +26,8 @@ class modelo_registro extends conexion
       }
       return 1;
     }
-    public function comprobar_usuario_admin($user){
-      $sql = "select * from usuario where user='$user'";
-      $result = $this->conn->query($sql);
-      while($usuario = $result->fetch_assoc())
-      {
-        if($usuario["admin"]==0){
-          return 0;
-        }else{
-          return 1;
-        }
-        
-      }
-      return 2;
-    }
-    
 
-    }
+}
 
 
 ?>

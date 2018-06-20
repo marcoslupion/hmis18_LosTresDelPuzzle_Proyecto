@@ -4,13 +4,6 @@ if(!class_exists('conexion')){
 }
 class modelo_usuario extends conexion
 {
-    public function insertar($usuario)
-    {
-      $sql = "select * from  usuario ";
-      $result = $this->conn->query($sql);
-
-      return $result;
-    }
     public function modificar_correo($usuario,$correo,$activo)
     {
       $sql = "update usuario  set email = '$correo', activo='$activo' where user='$usuario';";
@@ -42,8 +35,10 @@ class modelo_usuario extends conexion
     public function comprobar_usuario($usuario){
       $sql = "select activo from usuario where user='$usuario'";
       $result = $this->conn->query($sql);
-
-      return $result;
+      while($usuario = $result->fetch_assoc()){
+        $salida = $usuario["activo"];
+      }
+      return $salida;
     }
 }
 

@@ -6,6 +6,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="../css/nuestro_css.css">
 <?php
+// @codeCoverageIgnoreStart
 include 'modelo_login.php';
 @session_start();
 $user=$_POST["user"];
@@ -35,4 +36,5 @@ else
   $script = "<script>document.location.assign('../vistas/ventana_administrador.php');</script>";
   echo $script;
 }
+// @codeCoverageIgnoreEnd
 ?>
