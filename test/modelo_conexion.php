@@ -11,10 +11,6 @@ class conexion
     $dbname = "hmis";
     // Crear conexion
     $this->conn = new mysqli($servername, $username, $password, $dbname);
-    // Comprobar conexion
-    if ($this->conn->connect_error) {
-        die("Connection failed: " . $this->conn->connect_error);
-      }
   }
 }
 ?>
