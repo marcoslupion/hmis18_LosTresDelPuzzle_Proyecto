@@ -36,8 +36,9 @@ class modelo_usuario extends conexion
       $sql = "select activo from usuario where user='$usuario'";
       $result = $this->conn->query($sql);
       while($usuario = $result->fetch_assoc()){
-      return $usuario["activo"];
-    }
+        $salida = $usuario["activo"];
+      }
+      return $salida;
     }
 }
 
